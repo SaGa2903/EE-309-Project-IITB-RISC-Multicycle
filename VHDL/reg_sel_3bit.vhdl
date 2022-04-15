@@ -12,13 +12,13 @@ end entity;
 
 architecture arch of reg is
 begin
-    r1: process(CLK, EN, input,reset)
+    r1: process(CLK, EN, input, reset)
 
     begin
         if CLK'event and CLK='1' then
             if reset='1' then
-                output( NO_OF_BITS-1 downto 0) <= (others <= '0');
-            elsif EN = '1' then
+                output(NO_OF_BITS-1 downto 0) <= (others <= '0');
+            elsif EN ='1' then
                 output <= input; 
             end if ;  
         end if ;
