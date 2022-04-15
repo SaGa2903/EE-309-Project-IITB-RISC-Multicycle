@@ -34,7 +34,7 @@ architecture arch of reg_file is
 
   p1: process(rf_cw, ir11to9, ir8to6, cc_out, s7, t2, t3, pc)
     -- mux1: process(rf_cw(5 downto 4), ir11to9,ir8to6,cc_out)
-    -- begin
+    begin
       case rf_cw(5 downto 4) is
         when "00" =>
           a1<= "111";
@@ -78,14 +78,14 @@ architecture arch of reg_file is
     -- wr: process(a1,CLK, rf_cw(6))
     --   begin
       if(reset= '1') then
-        r0 <= (others <= '0');
-        r1 <= (others <= '0');
-        r2 <= (others <= '0');
-        r3 <= (others <= '0');
-        r4 <= (others <= '0');
-        r5 <= (others <= '0');
-        r6 <= (others <= '0');
-        r7 <= (others <= '0');
+        r0 <= (others => '0');
+        r1 <= (others => '0');
+        r2 <= (others => '0');
+        r3 <= (others => '0');
+        r4 <= (others => '0');
+        r5 <= (others => '0');
+        r6 <= (others => '0');
+        r7 <= (others => '0');
       elsif(CLK'event and CLK='0') then
           if (rf_cw(6)='1') then
             case a3 is
