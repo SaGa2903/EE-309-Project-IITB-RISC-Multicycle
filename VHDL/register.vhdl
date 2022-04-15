@@ -12,7 +12,7 @@ end entity;
 
 architecture arch of reg is
 begin
-    r1: process(CLK, EN, input,reset)
+    r1: process(CLK, EN, input, reset)
 
     begin
         if CLK'event and CLK='1' then
