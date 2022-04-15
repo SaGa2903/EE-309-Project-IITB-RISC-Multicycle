@@ -6,20 +6,42 @@ use ieee.std_logic_1164.all;
 entity alu is
     port(
         alu_op: in std_logic_vector(1 downto 0);
-        alu_a: in std_logic_vector(15 downto 0);
-        alu_b: in std_logic_vector(15 downto 0);
+        t1, pc, se6, t2, shift1: in std_logic_vector(15 downto 0);
+        -- alu_b: in std_logic_vector(15 downto 0);
         CY: out std_logic;
         Z: out std_logic;
         Cin: in std_logic;
-        alu_c: out std_logic_vector(15 downto 0)
+        alu_c: out std_logic_vector(15 downto 0);
+        alu_cw: in std_logic_vector(3 downto 0)
         -- CLK: in std_logic
     );
     end entity;
 
 architecture arch of alu is
+    signal alu_a, alu_b: std_logic_vector(15 downto 0);
+
 begin
-    alu1: process(alu_a, alu_b, Cin, alu_op)
+    alu1: process(t1, pc, se6, t2, shift1, Cin, alu_op)
         variable alu_out, temp_a, temp_b: std_logic_vector(16 downto 0);
+
+        case alu_cw(2) is
+            when '0' =>
+              alu_a <= t1;
+            when others =>
+              alu_a <= pc;
+        end case;
+
+        case alu_cw(1 downto 0) is
+            when "00" =>
+              alu_b<= X"0001";
+            when "01" =>
+              a1<= se6;
+            when "10" =>
+              a1<= t2;    
+            when others =>
+              a1<= shift1;
+          end case; 
+          
         temp_a := '0' & alu_a;
         temp_b := '0' & alu_b;
         CY <= Cin;
