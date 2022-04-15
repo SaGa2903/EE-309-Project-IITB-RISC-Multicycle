@@ -6,7 +6,11 @@ use ieee.numeric_std.all;
 entity reg_file is
 port (
     CLK ,reset: in std_logic;
-    
+    a2 : in std_logic_vector (2 downto 0);
+    d1, d2 : out std_logic_vector(15 downto 0);
+    ir11to9, ir8to6, cc_out: in std_logic_vector(2 downto 0);
+    s7, pc, t2, t3: in std_logic_vector(15 downto 0)
+    rf_cw: in std_logic_vector(8 downto 0)
   );
 end entity reg_file;
 
@@ -14,58 +18,147 @@ architecture arch of reg_file is
 
 
 component reg is
-  port (EN, reset, CLK: in std_logic;
-        ip: in std_logic_vector(15 downto 0);
-        op: out std_logic_vector(15 downto 0)
-		  );
+  generic (NO_OF_BITS: integer:=16);
+  port(  
+      EN, reset, CLK: in std_logic;
+      input: in std_logic_vector(NO_OF_BITS-1 downto 0);
+      output: out std_logic_vector(NO_OF_BITS-1 downto 0)
+  );
 end component;
 
+architecture arch of reg_file is
+  begin
 
-type rin is array(0 to 7) of std_logic_vector(15 downto 0);
-signal reg_in,reg_out : rin;
-signal wr_enable,wr_enable_final: std_logic_vector(7 downto 0);
+  signal r0, r1, r2, r3, r4, r5, r6, r7,d3: std_logic_vector(15 downto 0);
+  signal a1,a3: std_logic_vector(2 downto 0);
 
-begin
+  p1: process(rf_cw, ir11to9, ir8to6, cc_out, s7, t2, t3, pc)
+    -- mux1: process(rf_cw(5 downto 4), ir11to9,ir8to6,cc_out)
+    -- begin
+      case rf_cw(5 downto 4) is
+        when "00" =>
+          a1<= "111";
+        when "01" =>
+          a1<= ir11to9;
+        when "10" =>
+          a1<= ir8to6;    
+        when others =>
+          a1<= cc_out;
+      end case; 
+    -- end process;
 
-    rf_d1 <= reg_out(to_integer(unsigned(rf_a1)));
-    rf_d2 <= reg_out(to_integer(unsigned(rf_a2)));
+    -- mux3: process(rf_cw(3 downto 2), ir11to9,ir8to6,cc_out)
+    -- begin
+      case rf_cw(3 downto 2) is
+        when "00" =>
+          a3<= "111";
+        when "01" =>
+          a3<= ir11to9;
+        when "10" =>
+          a3<= ir8to6;    
+        when others =>
+          a3<= cc_out;
+      end case; 
+    -- end process;
 
-with rf_a3 select
- wr_enable <= 	"10000001" when "000",
-					"10000010" when "001",
-					"10000100" when "010",
-					"10001000" when "011",
-					"10010000" when "100",
-					"10100000" when "101",
-					"11000000" when "110",
-					"10000000" when "111",
-					"00000000" when others;
+    -- mux4: process(rf_cw(1 downto 0), s7, t2, t3, pc)
+    -- begin
+      case rf_cw(3 downto 2) is
+        when "00" =>
+          d3<= s7;
+        when "01" =>
+          d3<= t3;
+        when "10" =>
+          d3<= pc;    
+        when others =>
+          d3<= t2;
+      end case; 
+    -- end process;
 
-  reg_in(0) <= rf_d3;
-  reg_in(1) <= rf_d3;
-  reg_in(2) <= rf_d3;
-  reg_in(3) <= rf_d3;
-  reg_in(4) <= rf_d3;
-  reg_in(5) <= rf_d3;
-  reg_in(6) <= rf_d3;
-with r7_wr_mux select reg_in(7) <=
-        rf_d3 when "00",
-        pc_to_r7 when "01",
-        t2_to_r7 when "10",
-        alu_to_r7 when "11",
-		  (others => '0') when others;
+    -- wr: process(a1,CLK, rf_cw(6))
+    --   begin
+      if(reset= '1') then
+        r0 <= (others <= '0');
+        r1 <= (others <= '0');
+        r2 <= (others <= '0');
+        r3 <= (others <= '0');
+        r4 <= (others <= '0');
+        r5 <= (others <= '0');
+        r6 <= (others <= '0');
+        r7 <= (others <= '0');
+      elsif(CLK'event and CLK='0') then
+          if (rf_cw(6)='1') then
+            case a3 is
+              when "000" =>
+                r0<= d3;
+              when "001" =>
+                r1<= d3;
+              when "010" =>
+                r2<= d3;
+              when "011" =>
+                r3<= d3;
+              when "100" =>
+                r4<= d3;
+              when "101" =>
+                r5<= d3; 
+              when "110" =>
+                r6<= d3;
+              when others =>
+                r7<= d3;              
+            end case;
+          end if;
+      end if;
 
-wr_enable_final(0) <= wr_enable(0) and rf_wr;
-wr_enable_final(1) <= wr_enable(1) and rf_wr;
-wr_enable_final(2) <= wr_enable(2) and rf_wr;
-wr_enable_final(3) <= wr_enable(3) and rf_wr;
-wr_enable_final(4) <= wr_enable(4) and rf_wr;
-wr_enable_final(5) <= wr_enable(5) and rf_wr;
-wr_enable_final(6) <= wr_enable(6) and rf_wr;
-wr_enable_final(7) <= wr_enable(7) and rf_wr; 
+      --write
+      if(rf_cw(8) = '1') then
+        case a1 is
+          when "000" =>
+            d1<= r0;
+          when "001" =>
+            d1<= r1;
+          when "010" =>
+            d1<= r2;
+          when "011" =>
+            d1<= r3;
+          when "100" =>
+            d1<= r4;
+          when "101" =>
+            d1<= r5; 
+          when "110" =>
+            d1<= r6;
+          when others =>
+            d1<= r7;              
+        end case;
+      end if;      
+      
+      --write
+      if(rf_cw(7) = '1') then
+        case a2 is
+          when "000" =>
+            d1<= r0;
+          when "001" =>
+            d1<= r1;
+          when "010" =>
+            d1<= r2;
+          when "011" =>
+            d1<= r3;
+          when "100" =>
+            d1<= r4;
+          when "101" =>
+            d1<= r5; 
+          when "110" =>
+            d1<= r6;
+          when others =>
+            d1<= r7;              
+        end case;
+      end if; 
+  end process;
 
-  R : for n in 0 to 7 generate
-      Rn: reg port map(EN =>wr_enable_final(n),reset => reset,CLK => CLK,ip=>reg_in(n),op=>reg_out(n));
-  end generate R;
+  
 
 end arch;
+
+
+
+
+
