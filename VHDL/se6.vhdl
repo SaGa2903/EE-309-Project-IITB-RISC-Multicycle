@@ -11,13 +11,13 @@ end entity;
 
 architecture arch of SE6 is
 begin
-    op(5 downto 0) <= ip;
-    process(ip)
+    output(5 downto 0) <= input;
+    process(input)
         begin
-            if ip(5) = '1' then
-	            op(15 downto 6) <= (others=>'1');
+            if input(5) = '1' then
+	            output(15 downto 6) <= (others=>'1');
             else
-	            op(15 downto 6) <= (others=>'0');
+	            output(15 downto 6) <= (others=>'0');
             end if;
         end process;
 end arch;
