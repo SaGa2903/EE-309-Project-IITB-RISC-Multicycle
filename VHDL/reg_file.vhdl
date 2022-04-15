@@ -17,14 +17,14 @@ end entity reg_file;
 architecture arch of reg_file is
 
 
-component reg is
-  generic (NO_OF_BITS: integer:=16);
-  port(  
-      EN, reset, CLK: in std_logic;
-      input: in std_logic_vector(NO_OF_BITS-1 downto 0);
-      output: out std_logic_vector(NO_OF_BITS-1 downto 0)
-  );
-end component;
+-- component reg is
+--   generic (NO_OF_BITS: integer:=16);
+--   port(  
+--       EN, reset, CLK: in std_logic;
+--       input: in std_logic_vector(NO_OF_BITS-1 downto 0);
+--       output: out std_logic_vector(NO_OF_BITS-1 downto 0)
+--   );
+-- end component;
 
 architecture arch of reg_file is
   begin
@@ -153,8 +153,6 @@ architecture arch of reg_file is
         end case;
       end if; 
   end process;
-
-  
 
 end arch;
 
