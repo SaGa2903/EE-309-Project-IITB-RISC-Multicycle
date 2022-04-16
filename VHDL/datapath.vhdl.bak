@@ -1,12 +1,8 @@
-library ieee;
-use ieee.std_logic_1164.all;
-use ieee.numeric_std.all;
-
 entity dataflow is
     port(
         state_id: in std_logic_vector(4 downto 0);
         state_cw: in std_logic_vector(34 downto 0);
-        clk, reset: in std_logic;
+        clk, reset: in std_logic
 
         c, z, eq : out std_logic;  -- eq to be clarified
         opcode: out std_logic_vector(3 downto 0);
@@ -15,7 +11,7 @@ entity dataflow is
     );
 end entity;
     
-architecture arch of dataflow is 
+architecture arch of datapath is 
     component alu is
         port(
             alu_op: in std_logic_vector(3 downto 0);
@@ -36,7 +32,7 @@ architecture arch of dataflow is
             a2 : in std_logic_vector (2 downto 0);
             d1, d2 : out std_logic_vector(15 downto 0);
             ir11to9, ir8to6,ir5to3, cc_out: in std_logic_vector(2 downto 0);
-            sh7, pc, t2, t3: in std_logic_vector(15 downto 0);
+            sh7, pc, t2, t3: in std_logic_vector(15 downto 0)
             rf_cw: in std_logic_vector(8 downto 0)
         );
     end component reg_file;
@@ -83,9 +79,9 @@ architecture arch of dataflow is
 
     component cond_check is
         port(
-        input: in std_logic_vector(7 downto 0);
-        output: out std_logic_vector(2 downto 0);
-        out_tc : out std_logic_vector(7 downto 0) 
+        input: in std_logic_vector(15 downto 0);
+        output: out std_logic_vector(15 downto 0);
+        out_tc : out std_logic_vector(15 downto 0) 
         );
     end component;
 
@@ -106,15 +102,6 @@ architecture arch of dataflow is
             output: out std_logic_vector(15 downto 0)
         );
     end component;
-	 
-	 component reg_tc is
-    port(
-        sel, EN: in std_logic;
-        reset, CLK: in std_logic;
-        in_0, in_1: in std_logic_vector(7 downto 0);
-        output: out std_logic_vector(7 downto 0)
-	     );
-	 end component;
 
     component mem is
         port(
@@ -131,7 +118,7 @@ architecture arch of dataflow is
     signal i8to0: std_logic_vector(8 downto 0);
     signal i7to0, cc_addr_out, tc_out: std_logic_vector(7 downto 0);
     signal i15to12: std_logic_vector(3 downto 0);
-    signal z_sig, cy_sig,eq_out: std_logic;
+    signal z, cy: std_logic
     signal i1to0: std_logic_vector(1 downto 0);
 
 
@@ -185,7 +172,7 @@ architecture arch of dataflow is
             in_1 => se6_out,
             in_2=> se9_out,
             in_3=> mem_d_out,
-            output=> t2_out
+            output=> pc_out
             );
         
         rf: reg_file port map(
@@ -266,16 +253,16 @@ architecture arch of dataflow is
             se6=>se6_out,
             t2=>t2_out,
             shift1=> sh1_out,
-            CY=>cy_sig,
-            Z=>z_sig,
-            Cin=>cy_sig,
+            CY=>cy,
+            Z=>z,
+            Cin=>cy,
             alu_c=> alu_c_out,
             alu_cw=> state_cw(4 downto 1)
 
         );
 
-        c<= cy_sig;
-        z<= z_sig;
+        c<= cy;
+        z<= z;
         eq<=eq_out;
         cz<= i1to0;
         opcode<= i15to12;

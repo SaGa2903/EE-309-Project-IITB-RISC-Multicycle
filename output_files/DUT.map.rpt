@@ -1,0 +1,802 @@
+Analysis & Synthesis report for DUT
+Sat Apr 16 23:43:51 2022
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |DUT|risc:instance|Controller:control|s_current
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                              ;
++-----------------------------+---------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Sat Apr 16 23:43:51 2022       ;
+; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name               ; DUT                                         ;
+; Top-level Entity Name       ; DUT                                         ;
+; Family                      ; MAX V                                       ;
+; Total logic elements        ; 0                                           ;
+; Total pins                  ; 2                                           ;
+; Total virtual pins          ; 0                                           ;
+; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
++-----------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                            ; DUT                ; DUT                ;
+; Family name                                                      ; MAX V              ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                              ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                       ; Library ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------+---------+
+; VHDL/states_exp.vhdl             ; yes             ; User VHDL File  ; D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/states_exp.vhdl  ;         ;
+; VHDL/shift7.vhdl                 ; yes             ; User VHDL File  ; D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/shift7.vhdl      ;         ;
+; VHDL/shift1.vhdl                 ; yes             ; User VHDL File  ; D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/shift1.vhdl      ;         ;
+; VHDL/se9.vhdl                    ; yes             ; User VHDL File  ; D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/se9.vhdl         ;         ;
+; VHDL/se6.vhdl                    ; yes             ; User VHDL File  ; D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/se6.vhdl         ;         ;
+; VHDL/register_tc.vhdl            ; yes             ; User VHDL File  ; D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/register_tc.vhdl ;         ;
+; VHDL/register_3.vhdl             ; yes             ; User VHDL File  ; D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/register_3.vhdl  ;         ;
+; VHDL/register_2.vhdl             ; yes             ; User VHDL File  ; D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/register_2.vhdl  ;         ;
+; VHDL/reg_file.vhdl               ; yes             ; User VHDL File  ; D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/reg_file.vhdl    ;         ;
+; VHDL/memory.vhdl                 ; yes             ; User VHDL File  ; D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/memory.vhdl      ;         ;
+; VHDL/ir.vhdl                     ; yes             ; User VHDL File  ; D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/ir.vhdl          ;         ;
+; VHDL/IITB_RISC.vhdl              ; yes             ; User VHDL File  ; D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/IITB_RISC.vhdl   ;         ;
+; VHDL/DUT.vhdl                    ; yes             ; User VHDL File  ; D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/DUT.vhdl         ;         ;
+; VHDL/datapath.vhdl               ; yes             ; User VHDL File  ; D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/datapath.vhdl    ;         ;
+; VHDL/cond_check.vhdl             ; yes             ; User VHDL File  ; D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/cond_check.vhdl  ;         ;
+; VHDL/alu.vhdl                    ; yes             ; User VHDL File  ; D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/alu.vhdl         ;         ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Total logic elements                        ; 0     ;
+;     -- Combinational with no register       ; 0     ;
+;     -- Register only                        ; 0     ;
+;     -- Combinational with a register        ; 0     ;
+;                                             ;       ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 0     ;
+;     -- 2 input functions                    ; 0     ;
+;     -- 1 input functions                    ; 0     ;
+;     -- 0 input functions                    ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 0     ;
+;     -- arithmetic mode                      ; 0     ;
+;     -- qfbk mode                            ; 0     ;
+;     -- register cascade mode                ; 0     ;
+;     -- synchronous clear/load mode          ; 0     ;
+;     -- asynchronous clear/load mode         ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+; I/O pins                                    ; 2     ;
++---------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
+; |DUT                       ; 0 (0)       ; 0            ; 0          ; 2    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT                ; DUT         ; work         ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |DUT|risc:instance|Controller:control|s_current                                                                                                                                                                                                                                                                                                                                                     ;
++---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
+; Name          ; s_current.s24 ; s_current.s23 ; s_current.s22 ; s_current.s21 ; s_current.s20 ; s_current.s19 ; s_current.s18 ; s_current.s17 ; s_current.s16 ; s_current.s15 ; s_current.s14 ; s_current.s13 ; s_current.s12 ; s_current.s11 ; s_current.s10 ; s_current.s9 ; s_current.s8 ; s_current.s7 ; s_current.s6 ; s_current.s5 ; s_current.s4 ; s_current.s3 ; s_current.s2 ; s_current.s1 ; s_current.s0 ;
++---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
+; s_current.s0  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ;
+; s_current.s1  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 1            ;
+; s_current.s2  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 1            ;
+; s_current.s3  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 1            ;
+; s_current.s4  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 1            ;
+; s_current.s5  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; s_current.s6  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; s_current.s7  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; s_current.s8  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; s_current.s9  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; s_current.s10 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; s_current.s11 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; s_current.s12 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; s_current.s13 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; s_current.s14 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; s_current.s15 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; s_current.s16 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; s_current.s17 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; s_current.s18 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; s_current.s19 ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; s_current.s20 ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; s_current.s21 ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; s_current.s22 ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; s_current.s23 ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; s_current.s24 ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
++---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
+
+
++-------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                      ;
++----------------------------------------------------+--------------------+
+; Register name                                      ; Reason for Removal ;
++----------------------------------------------------+--------------------+
+; risc:instance|dataflow:data|reg_2:pc|output[15]    ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_2:t1|output[15]    ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_2:pc|output[14]    ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_2:t1|output[14]    ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_2:pc|output[13]    ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_2:t1|output[13]    ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_2:pc|output[12]    ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_2:t1|output[12]    ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_2:pc|output[11]    ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_2:t1|output[11]    ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_2:pc|output[10]    ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_2:t1|output[10]    ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_2:pc|output[9]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_2:t1|output[9]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_2:pc|output[8]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_2:t1|output[8]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_2:pc|output[7]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_2:t1|output[7]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_2:pc|output[6]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_2:t1|output[6]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_2:pc|output[5]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_2:t1|output[5]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_2:pc|output[4]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_2:t1|output[4]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_2:pc|output[3]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_2:t1|output[3]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_2:pc|output[2]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_2:t1|output[2]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_2:pc|output[1]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_2:t1|output[1]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_2:pc|output[0]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_2:t1|output[0]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_3:t2|output[0..15] ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_tc:tc|output[0..7] ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r0[0]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r1[0]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r2[0]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r3[0]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r4[0]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r5[0]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r6[0]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r7[0]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r0[1]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r1[1]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r2[1]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r3[1]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r4[1]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r5[1]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r6[1]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r7[1]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r0[2]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r1[2]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r2[2]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r3[2]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r4[2]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r5[2]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r6[2]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r7[2]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r0[3]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r1[3]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r2[3]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r3[3]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r4[3]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r5[3]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r6[3]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r7[3]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r0[4]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r1[4]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r2[4]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r3[4]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r4[4]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r5[4]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r6[4]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r7[4]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r0[5]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r1[5]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r2[5]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r3[5]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r4[5]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r5[5]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r6[5]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r7[5]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r0[6]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r1[6]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r2[6]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r3[6]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r4[6]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r5[6]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r6[6]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r7[6]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r0[7]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r1[7]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r2[7]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r3[7]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r4[7]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r5[7]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r6[7]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r7[7]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r0[8]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r1[8]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r2[8]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r3[8]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r4[8]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r5[8]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r6[8]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r7[8]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r0[9]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r1[9]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r2[9]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r3[9]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r4[9]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r5[9]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r6[9]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r7[9]      ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r0[10]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r1[10]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r2[10]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r3[10]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r4[10]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r5[10]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r6[10]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r7[10]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r0[11]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r1[11]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r2[11]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r3[11]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r4[11]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r5[11]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r6[11]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r7[11]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r0[12]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r1[12]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r2[12]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r3[12]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r4[12]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r5[12]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r6[12]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r7[12]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r0[13]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r1[13]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r2[13]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r3[13]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r4[13]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r5[13]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r6[13]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r7[13]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r0[14]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r1[14]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r2[14]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r3[14]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r4[14]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r5[14]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r6[14]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r7[14]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r0[15]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r1[15]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r2[15]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r3[15]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r4[15]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r5[15]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r6[15]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_file:rf|r7[15]     ; Lost fanout        ;
+; risc:instance|dataflow:data|reg_2:t3|output[0..15] ; Lost fanout        ;
+; risc:instance|Controller:control|s_current.s0      ; Lost fanout        ;
+; risc:instance|Controller:control|s_current.s1      ; Lost fanout        ;
+; risc:instance|Controller:control|s_current.s2      ; Lost fanout        ;
+; risc:instance|Controller:control|s_current.s3      ; Lost fanout        ;
+; risc:instance|Controller:control|s_current.s4      ; Lost fanout        ;
+; risc:instance|Controller:control|s_current.s5      ; Lost fanout        ;
+; risc:instance|Controller:control|s_current.s6      ; Lost fanout        ;
+; risc:instance|Controller:control|s_current.s7      ; Lost fanout        ;
+; risc:instance|Controller:control|s_current.s8      ; Lost fanout        ;
+; risc:instance|Controller:control|s_current.s9      ; Lost fanout        ;
+; risc:instance|Controller:control|s_current.s10     ; Lost fanout        ;
+; risc:instance|Controller:control|s_current.s11     ; Lost fanout        ;
+; risc:instance|Controller:control|s_current.s12     ; Lost fanout        ;
+; risc:instance|Controller:control|s_current.s13     ; Lost fanout        ;
+; risc:instance|Controller:control|s_current.s14     ; Lost fanout        ;
+; risc:instance|Controller:control|s_current.s15     ; Lost fanout        ;
+; risc:instance|Controller:control|s_current.s16     ; Lost fanout        ;
+; risc:instance|Controller:control|s_current.s17     ; Lost fanout        ;
+; risc:instance|Controller:control|s_current.s18     ; Lost fanout        ;
+; risc:instance|Controller:control|s_current.s19     ; Lost fanout        ;
+; risc:instance|Controller:control|s_current.s20     ; Lost fanout        ;
+; risc:instance|Controller:control|s_current.s21     ; Lost fanout        ;
+; risc:instance|Controller:control|s_current.s22     ; Lost fanout        ;
+; risc:instance|Controller:control|s_current.s23     ; Lost fanout        ;
+; risc:instance|Controller:control|s_current.s24     ; Lost fanout        ;
+; Total Number of Removed Registers = 225            ;                    ;
++----------------------------------------------------+--------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                             ;
++-------------------------------------------------+--------------------+--------------------------------------------------+
+; Register name                                   ; Reason for Removal ; Registers Removed due to This Register           ;
++-------------------------------------------------+--------------------+--------------------------------------------------+
+; risc:instance|dataflow:data|reg_2:pc|output[15] ; Lost Fanouts       ; risc:instance|dataflow:data|reg_2:t1|output[15], ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_2:pc|output[14], ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_2:t1|output[14], ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_2:pc|output[13], ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_2:t1|output[13], ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_2:pc|output[12], ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_3:t2|output[14], ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_3:t2|output[15], ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_3:t2|output[13], ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_3:t2|output[12], ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_3:t2|output[11], ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_tc:tc|output[5], ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_tc:tc|output[0], ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r0[12],  ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r1[12],  ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r2[12],  ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r3[12],  ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r4[12],  ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r0[13],  ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r1[13],  ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r2[13],  ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r3[13],  ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r4[13],  ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r0[14],  ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r1[14],  ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r2[14],  ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r3[14],  ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r4[14],  ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r0[15],  ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r1[15],  ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r2[15],  ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r3[15],  ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r4[15],  ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_2:t3|output[12], ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_2:t3|output[13], ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_2:t3|output[14], ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_2:t3|output[15], ;
+;                                                 ;                    ; risc:instance|Controller:control|s_current.s0,   ;
+;                                                 ;                    ; risc:instance|Controller:control|s_current.s1,   ;
+;                                                 ;                    ; risc:instance|Controller:control|s_current.s2,   ;
+;                                                 ;                    ; risc:instance|Controller:control|s_current.s3,   ;
+;                                                 ;                    ; risc:instance|Controller:control|s_current.s7,   ;
+;                                                 ;                    ; risc:instance|Controller:control|s_current.s9,   ;
+;                                                 ;                    ; risc:instance|Controller:control|s_current.s12,  ;
+;                                                 ;                    ; risc:instance|Controller:control|s_current.s15,  ;
+;                                                 ;                    ; risc:instance|Controller:control|s_current.s16,  ;
+;                                                 ;                    ; risc:instance|Controller:control|s_current.s18,  ;
+;                                                 ;                    ; risc:instance|Controller:control|s_current.s19,  ;
+;                                                 ;                    ; risc:instance|Controller:control|s_current.s20,  ;
+;                                                 ;                    ; risc:instance|Controller:control|s_current.s21,  ;
+;                                                 ;                    ; risc:instance|Controller:control|s_current.s22,  ;
+;                                                 ;                    ; risc:instance|Controller:control|s_current.s23   ;
+; risc:instance|dataflow:data|reg_2:pc|output[0]  ; Lost Fanouts       ; risc:instance|dataflow:data|reg_2:t1|output[0],  ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r0[0],   ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r1[0],   ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r2[0],   ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r3[0],   ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r4[0],   ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_2:t3|output[0],  ;
+;                                                 ;                    ; risc:instance|Controller:control|s_current.s4,   ;
+;                                                 ;                    ; risc:instance|Controller:control|s_current.s5,   ;
+;                                                 ;                    ; risc:instance|Controller:control|s_current.s6,   ;
+;                                                 ;                    ; risc:instance|Controller:control|s_current.s8,   ;
+;                                                 ;                    ; risc:instance|Controller:control|s_current.s10,  ;
+;                                                 ;                    ; risc:instance|Controller:control|s_current.s11,  ;
+;                                                 ;                    ; risc:instance|Controller:control|s_current.s17   ;
+; risc:instance|dataflow:data|reg_2:pc|output[4]  ; Lost Fanouts       ; risc:instance|dataflow:data|reg_2:t1|output[4],  ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_3:t2|output[3],  ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r0[4],   ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r1[4],   ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r2[4],   ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r3[4],   ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r4[4],   ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_2:t3|output[4],  ;
+;                                                 ;                    ; risc:instance|Controller:control|s_current.s14,  ;
+;                                                 ;                    ; risc:instance|Controller:control|s_current.s24   ;
+; risc:instance|dataflow:data|reg_2:pc|output[10] ; Lost Fanouts       ; risc:instance|dataflow:data|reg_2:t1|output[10], ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_3:t2|output[9],  ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r0[10],  ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r1[10],  ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r2[10],  ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r3[10],  ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r4[10],  ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_2:t3|output[10]  ;
+; risc:instance|dataflow:data|reg_2:pc|output[9]  ; Lost Fanouts       ; risc:instance|dataflow:data|reg_2:t1|output[9],  ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_3:t2|output[8],  ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r0[9],   ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r1[9],   ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r2[9],   ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r3[9],   ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r4[9],   ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_2:t3|output[9]   ;
+; risc:instance|dataflow:data|reg_2:pc|output[8]  ; Lost Fanouts       ; risc:instance|dataflow:data|reg_2:t1|output[8],  ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_3:t2|output[7],  ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r0[8],   ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r1[8],   ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r2[8],   ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r3[8],   ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r4[8],   ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_2:t3|output[8]   ;
+; risc:instance|dataflow:data|reg_2:pc|output[7]  ; Lost Fanouts       ; risc:instance|dataflow:data|reg_2:t1|output[7],  ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_3:t2|output[6],  ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r0[7],   ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r1[7],   ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r2[7],   ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r3[7],   ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r4[7],   ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_2:t3|output[7]   ;
+; risc:instance|dataflow:data|reg_2:pc|output[6]  ; Lost Fanouts       ; risc:instance|dataflow:data|reg_2:t1|output[6],  ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_3:t2|output[5],  ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r0[6],   ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r1[6],   ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r2[6],   ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r3[6],   ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r4[6],   ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_2:t3|output[6]   ;
+; risc:instance|dataflow:data|reg_2:pc|output[5]  ; Lost Fanouts       ; risc:instance|dataflow:data|reg_2:t1|output[5],  ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_3:t2|output[4],  ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r0[5],   ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r1[5],   ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r2[5],   ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r3[5],   ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r4[5],   ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_2:t3|output[5]   ;
+; risc:instance|dataflow:data|reg_2:pc|output[3]  ; Lost Fanouts       ; risc:instance|dataflow:data|reg_2:t1|output[3],  ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_3:t2|output[2],  ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r0[3],   ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r1[3],   ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r2[3],   ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r3[3],   ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r4[3],   ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_2:t3|output[3]   ;
+; risc:instance|dataflow:data|reg_2:pc|output[2]  ; Lost Fanouts       ; risc:instance|dataflow:data|reg_2:t1|output[2],  ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_3:t2|output[1],  ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r0[2],   ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r1[2],   ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r2[2],   ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r3[2],   ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r4[2],   ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_2:t3|output[2]   ;
+; risc:instance|dataflow:data|reg_2:pc|output[1]  ; Lost Fanouts       ; risc:instance|dataflow:data|reg_2:t1|output[1],  ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_3:t2|output[0],  ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r0[1],   ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r1[1],   ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r2[1],   ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r3[1],   ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r4[1],   ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_2:t3|output[1]   ;
+; risc:instance|dataflow:data|reg_2:pc|output[11] ; Lost Fanouts       ; risc:instance|dataflow:data|reg_3:t2|output[10], ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r0[11],  ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r1[11],  ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r2[11],  ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r3[11],  ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_file:rf|r4[11],  ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_2:t3|output[11]  ;
+; risc:instance|dataflow:data|reg_tc:tc|output[7] ; Lost Fanouts       ; risc:instance|dataflow:data|reg_tc:tc|output[6], ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_tc:tc|output[4], ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_tc:tc|output[3], ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_tc:tc|output[2], ;
+;                                                 ;                    ; risc:instance|dataflow:data|reg_tc:tc|output[1]  ;
++-------------------------------------------------+--------------------+--------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |DUT|risc:instance|dataflow:data|reg_2:t3|output[4]      ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |DUT|risc:instance|dataflow:data|reg_3:t2|output[6]      ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DUT|risc:instance|dataflow:data|reg_3:t2|output[3]      ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |DUT|risc:instance|dataflow:data|reg_2:t1|output[15]     ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |DUT|risc:instance|dataflow:data|reg_3:t2|output[14]     ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |DUT|risc:instance|dataflow:data|reg_2:pc|output[5]      ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; No         ; |DUT|risc:instance|dataflow:data|alu:alu_1|Mux10         ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |DUT|risc:instance|dataflow:data|reg_file:rf|Mux0        ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |DUT|risc:instance|dataflow:data|reg_file:rf|Mux15       ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |DUT|risc:instance|dataflow:data|reg_file:rf|Mux6        ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; No         ; |DUT|risc:instance|Controller:control|s_current          ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |DUT|risc:instance|dataflow:data|alu:alu_1|Mux14         ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |DUT|risc:instance|dataflow:data|mem:memory|add_in[6]    ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |DUT|risc:instance|dataflow:data|cond_check:CC|output[2] ;
+; 16:1               ; 16 bits   ; 160 LEs       ; 80 LEs               ; 80 LEs                 ; No         ; |DUT|risc:instance|dataflow:data|reg_file:rf|d1[15]      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Sat Apr 16 23:43:35 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off IITB_RISC -c DUT
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file vhdl/states_exp.vhdl
+    Info (12022): Found design unit 1: Controller-design File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/states_exp.vhdl Line: 15
+    Info (12023): Found entity 1: Controller File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/states_exp.vhdl Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file vhdl/shift7.vhdl
+    Info (12022): Found design unit 1: Shift7-arch File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/shift7.vhdl Line: 12
+    Info (12023): Found entity 1: Shift7 File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/shift7.vhdl Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file vhdl/shift1.vhdl
+    Info (12022): Found design unit 1: Shift1-arch File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/shift1.vhdl Line: 12
+    Info (12023): Found entity 1: Shift1 File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/shift1.vhdl Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file vhdl/se9.vhdl
+    Info (12022): Found design unit 1: SE9-arch File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/se9.vhdl Line: 12
+    Info (12023): Found entity 1: SE9 File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/se9.vhdl Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file vhdl/se6.vhdl
+    Info (12022): Found design unit 1: SE6-arch File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/se6.vhdl Line: 12
+    Info (12023): Found entity 1: SE6 File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/se6.vhdl Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file vhdl/register_tc.vhdl
+    Info (12022): Found design unit 1: reg_tc-arch File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/register_tc.vhdl Line: 13
+    Info (12023): Found entity 1: reg_tc File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/register_tc.vhdl Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file vhdl/register_3.vhdl
+    Info (12022): Found design unit 1: reg_3-arch File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/register_3.vhdl Line: 13
+    Info (12023): Found entity 1: reg_3 File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/register_3.vhdl Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file vhdl/register_2.vhdl
+    Info (12022): Found design unit 1: reg_2-arch File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/register_2.vhdl Line: 13
+    Info (12023): Found entity 1: reg_2 File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/register_2.vhdl Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file vhdl/reg_sel_3bit.vhdl
+    Info (12022): Found design unit 1: reg-arch File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/reg_sel_3bit.vhdl Line: 13
+    Info (12023): Found entity 1: reg File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/reg_sel_3bit.vhdl Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file vhdl/reg_file.vhdl
+    Info (12022): Found design unit 1: reg_file-arch File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/reg_file.vhdl Line: 29
+    Info (12023): Found entity 1: reg_file File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/reg_file.vhdl Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file vhdl/memory.vhdl
+    Info (12022): Found design unit 1: mem-arch File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/memory.vhdl Line: 14
+    Info (12023): Found entity 1: mem File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/memory.vhdl Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file vhdl/ir.vhdl
+    Info (12022): Found design unit 1: ir-arch File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/ir.vhdl Line: 17
+    Info (12023): Found entity 1: ir File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/ir.vhdl Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file vhdl/iitb_risc.vhdl
+    Info (12022): Found design unit 1: risc-arch File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/IITB_RISC.vhdl Line: 10
+    Info (12023): Found entity 1: risc File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/IITB_RISC.vhdl Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file vhdl/eq.vhdl
+    Info (12022): Found design unit 1: eq-arch File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/eq.vhdl Line: 12
+    Info (12023): Found entity 1: eq File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/eq.vhdl Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file vhdl/dut.vhdl
+    Info (12022): Found design unit 1: DUT-arch File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/DUT.vhdl Line: 10
+    Info (12023): Found entity 1: DUT File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/DUT.vhdl Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file vhdl/datapath.vhdl
+    Info (12022): Found design unit 1: dataflow-arch File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/datapath.vhdl Line: 18
+    Info (12023): Found entity 1: dataflow File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/datapath.vhdl Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file vhdl/cond_check.vhdl
+    Info (12022): Found design unit 1: cond_check-arch File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/cond_check.vhdl Line: 14
+    Info (12023): Found entity 1: cond_check File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/cond_check.vhdl Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file vhdl/alu.vhdl
+    Info (12022): Found design unit 1: alu-arch File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/alu.vhdl Line: 20
+    Info (12023): Found entity 1: alu File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/alu.vhdl Line: 6
+Info (12127): Elaborating entity "DUT" for the top level hierarchy
+Info (12128): Elaborating entity "risc" for hierarchy "risc:instance" File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/DUT.vhdl Line: 17
+Info (12128): Elaborating entity "dataflow" for hierarchy "risc:instance|dataflow:data" File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/IITB_RISC.vhdl Line: 43
+Warning (10541): VHDL Signal Declaration warning at datapath.vhdl(134): used implicit default value for signal "eq_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/datapath.vhdl Line: 134
+Info (12128): Elaborating entity "reg_2" for hierarchy "risc:instance|dataflow:data|reg_2:t1" File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/datapath.vhdl Line: 139
+Info (12128): Elaborating entity "reg_tc" for hierarchy "risc:instance|dataflow:data|reg_tc:tc" File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/datapath.vhdl Line: 149
+Info (12128): Elaborating entity "reg_3" for hierarchy "risc:instance|dataflow:data|reg_3:t2" File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/datapath.vhdl Line: 179
+Info (12128): Elaborating entity "reg_file" for hierarchy "risc:instance|dataflow:data|reg_file:rf" File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/datapath.vhdl Line: 191
+Warning (10541): VHDL Signal Declaration warning at reg_file.vhdl(10): used implicit default value for signal "d2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/reg_file.vhdl Line: 10
+Warning (10492): VHDL Process Statement warning at reg_file.vhdl(82): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/reg_file.vhdl Line: 82
+Warning (10492): VHDL Process Statement warning at reg_file.vhdl(91): signal "CLK" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/reg_file.vhdl Line: 91
+Warning (10492): VHDL Process Statement warning at reg_file.vhdl(116): signal "a1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/reg_file.vhdl Line: 116
+Warning (10492): VHDL Process Statement warning at reg_file.vhdl(118): signal "r0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/reg_file.vhdl Line: 118
+Warning (10492): VHDL Process Statement warning at reg_file.vhdl(120): signal "r1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/reg_file.vhdl Line: 120
+Warning (10492): VHDL Process Statement warning at reg_file.vhdl(122): signal "r2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/reg_file.vhdl Line: 122
+Warning (10492): VHDL Process Statement warning at reg_file.vhdl(124): signal "r3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/reg_file.vhdl Line: 124
+Warning (10492): VHDL Process Statement warning at reg_file.vhdl(126): signal "r4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/reg_file.vhdl Line: 126
+Warning (10492): VHDL Process Statement warning at reg_file.vhdl(128): signal "r5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/reg_file.vhdl Line: 128
+Warning (10492): VHDL Process Statement warning at reg_file.vhdl(130): signal "r6" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/reg_file.vhdl Line: 130
+Warning (10492): VHDL Process Statement warning at reg_file.vhdl(132): signal "r7" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/reg_file.vhdl Line: 132
+Warning (10492): VHDL Process Statement warning at reg_file.vhdl(138): signal "a2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/reg_file.vhdl Line: 138
+Warning (10492): VHDL Process Statement warning at reg_file.vhdl(140): signal "r0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/reg_file.vhdl Line: 140
+Warning (10492): VHDL Process Statement warning at reg_file.vhdl(142): signal "r1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/reg_file.vhdl Line: 142
+Warning (10492): VHDL Process Statement warning at reg_file.vhdl(144): signal "r2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/reg_file.vhdl Line: 144
+Warning (10492): VHDL Process Statement warning at reg_file.vhdl(146): signal "r3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/reg_file.vhdl Line: 146
+Warning (10492): VHDL Process Statement warning at reg_file.vhdl(148): signal "r4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/reg_file.vhdl Line: 148
+Warning (10492): VHDL Process Statement warning at reg_file.vhdl(150): signal "r5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/reg_file.vhdl Line: 150
+Warning (10492): VHDL Process Statement warning at reg_file.vhdl(152): signal "r6" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/reg_file.vhdl Line: 152
+Warning (10492): VHDL Process Statement warning at reg_file.vhdl(154): signal "r7" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/reg_file.vhdl Line: 154
+Warning (10631): VHDL Process Statement warning at reg_file.vhdl(37): inferring latch(es) for signal or variable "d1", which holds its previous value in one or more paths through the process File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/reg_file.vhdl Line: 37
+Info (10041): Inferred latch for "d1[0]" at reg_file.vhdl(37) File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/reg_file.vhdl Line: 37
+Info (10041): Inferred latch for "d1[1]" at reg_file.vhdl(37) File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/reg_file.vhdl Line: 37
+Info (10041): Inferred latch for "d1[2]" at reg_file.vhdl(37) File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/reg_file.vhdl Line: 37
+Info (10041): Inferred latch for "d1[3]" at reg_file.vhdl(37) File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/reg_file.vhdl Line: 37
+Info (10041): Inferred latch for "d1[4]" at reg_file.vhdl(37) File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/reg_file.vhdl Line: 37
+Info (10041): Inferred latch for "d1[5]" at reg_file.vhdl(37) File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/reg_file.vhdl Line: 37
+Info (10041): Inferred latch for "d1[6]" at reg_file.vhdl(37) File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/reg_file.vhdl Line: 37
+Info (10041): Inferred latch for "d1[7]" at reg_file.vhdl(37) File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/reg_file.vhdl Line: 37
+Info (10041): Inferred latch for "d1[8]" at reg_file.vhdl(37) File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/reg_file.vhdl Line: 37
+Info (10041): Inferred latch for "d1[9]" at reg_file.vhdl(37) File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/reg_file.vhdl Line: 37
+Info (10041): Inferred latch for "d1[10]" at reg_file.vhdl(37) File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/reg_file.vhdl Line: 37
+Info (10041): Inferred latch for "d1[11]" at reg_file.vhdl(37) File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/reg_file.vhdl Line: 37
+Info (10041): Inferred latch for "d1[12]" at reg_file.vhdl(37) File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/reg_file.vhdl Line: 37
+Info (10041): Inferred latch for "d1[13]" at reg_file.vhdl(37) File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/reg_file.vhdl Line: 37
+Info (10041): Inferred latch for "d1[14]" at reg_file.vhdl(37) File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/reg_file.vhdl Line: 37
+Info (10041): Inferred latch for "d1[15]" at reg_file.vhdl(37) File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/reg_file.vhdl Line: 37
+Info (12128): Elaborating entity "mem" for hierarchy "risc:instance|dataflow:data|mem:memory" File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/datapath.vhdl Line: 208
+Warning (10492): VHDL Process Statement warning at memory.vhdl(41): signal "clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/memory.vhdl Line: 41
+Warning (10631): VHDL Process Statement warning at memory.vhdl(20): inferring latch(es) for signal or variable "add_in", which holds its previous value in one or more paths through the process File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/memory.vhdl Line: 20
+Info (10041): Inferred latch for "add_in[0]" at memory.vhdl(20) File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/memory.vhdl Line: 20
+Info (10041): Inferred latch for "add_in[1]" at memory.vhdl(20) File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/memory.vhdl Line: 20
+Info (10041): Inferred latch for "add_in[2]" at memory.vhdl(20) File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/memory.vhdl Line: 20
+Info (10041): Inferred latch for "add_in[3]" at memory.vhdl(20) File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/memory.vhdl Line: 20
+Info (10041): Inferred latch for "add_in[4]" at memory.vhdl(20) File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/memory.vhdl Line: 20
+Info (10041): Inferred latch for "add_in[5]" at memory.vhdl(20) File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/memory.vhdl Line: 20
+Info (10041): Inferred latch for "add_in[6]" at memory.vhdl(20) File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/memory.vhdl Line: 20
+Info (10041): Inferred latch for "add_in[7]" at memory.vhdl(20) File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/memory.vhdl Line: 20
+Info (12128): Elaborating entity "ir" for hierarchy "risc:instance|dataflow:data|ir:Instruction_register" File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/datapath.vhdl Line: 218
+Info (12128): Elaborating entity "SE9" for hierarchy "risc:instance|dataflow:data|SE9:SE9_16" File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/datapath.vhdl Line: 230
+Info (12128): Elaborating entity "SE6" for hierarchy "risc:instance|dataflow:data|SE6:SE6_16" File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/datapath.vhdl Line: 236
+Info (12128): Elaborating entity "Shift7" for hierarchy "risc:instance|dataflow:data|Shift7:Shifter_7" File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/datapath.vhdl Line: 242
+Info (12128): Elaborating entity "Shift1" for hierarchy "risc:instance|dataflow:data|Shift1:Shifter_1" File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/datapath.vhdl Line: 250
+Info (12128): Elaborating entity "cond_check" for hierarchy "risc:instance|dataflow:data|cond_check:CC" File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/datapath.vhdl Line: 255
+Info (12128): Elaborating entity "alu" for hierarchy "risc:instance|dataflow:data|alu:alu_1" File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/datapath.vhdl Line: 261
+Warning (10492): VHDL Process Statement warning at alu.vhdl(28): signal "alu_cw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/alu.vhdl Line: 28
+Warning (10492): VHDL Process Statement warning at alu.vhdl(35): signal "alu_cw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/alu.vhdl Line: 35
+Warning (10492): VHDL Process Statement warning at alu.vhdl(46): signal "alu_a" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/alu.vhdl Line: 46
+Warning (10492): VHDL Process Statement warning at alu.vhdl(47): signal "alu_b" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/alu.vhdl Line: 47
+Warning (10492): VHDL Process Statement warning at alu.vhdl(50): signal "temp_a" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/alu.vhdl Line: 50
+Warning (10492): VHDL Process Statement warning at alu.vhdl(50): signal "temp_b" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/alu.vhdl Line: 50
+Warning (10492): VHDL Process Statement warning at alu.vhdl(57): signal "temp_a" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/alu.vhdl Line: 57
+Warning (10492): VHDL Process Statement warning at alu.vhdl(57): signal "temp_b" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/alu.vhdl Line: 57
+Warning (10492): VHDL Process Statement warning at alu.vhdl(58): signal "alu_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/alu.vhdl Line: 58
+Warning (10492): VHDL Process Statement warning at alu.vhdl(64): signal "alu_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/alu.vhdl Line: 64
+Warning (10492): VHDL Process Statement warning at alu.vhdl(69): signal "alu_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/alu.vhdl Line: 69
+Warning (10631): VHDL Process Statement warning at alu.vhdl(25): inferring latch(es) for signal or variable "alu_out", which holds its previous value in one or more paths through the process File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/alu.vhdl Line: 25
+Info (10041): Inferred latch for "alu_out[16]" at alu.vhdl(25) File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/alu.vhdl Line: 25
+Info (12128): Elaborating entity "Controller" for hierarchy "risc:instance|Controller:control" File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/IITB_RISC.vhdl Line: 47
+Info (17049): 225 registers lost all their fanouts during netlist optimizations.
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "input_vector[1]" File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/DUT.vhdl Line: 6
+    Warning (15610): No output dependent on input pin "input_vector[0]" File: D:/IIT BOMBAY/SEM-4/EE309/IITB_RISC/EE-309-Project-IITB-RISC/VHDL/DUT.vhdl Line: 6
+Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 0 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 41 warnings
+    Info: Peak virtual memory: 4772 megabytes
+    Info: Processing ended: Sat Apr 16 23:43:51 2022
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:31
+
+

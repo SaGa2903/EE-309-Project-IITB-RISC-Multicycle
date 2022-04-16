@@ -21,13 +21,16 @@ begin
     
     begin
 
-        if mem_cw(2 downto 1)="01" then
-              add_in<= d1;	  
-		  elsif mem_cw(2 downto 1)="10" then
+        case mem_cw(2 downto 1) is
+            -- when "00" =>
+            --   add_in<= "111";
+            when "01" =>
+              add_in<= d1;
+            when "10" =>
               add_in<= t1;    
-        elsif mem_cw(2 downto 1)="11" then
+            when "11" =>
               add_in<= t3;
-        end if; 
+        end case; 
         
            
           case mem_cw(3) is
@@ -55,3 +58,4 @@ begin
 
     
     
+end arch;
