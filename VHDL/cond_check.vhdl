@@ -5,9 +5,9 @@ use ieee.std_logic_1164.all;
 
 entity cond_check is
     port(
-      input: in std_logic_vector(15 downto 0);
-      output: out std_logic_vector(15 downto 0);
-      out_tc : out std_logic_vector(15 downto 0) 
+      input: in std_logic_vector(7 downto 0);
+      output: out std_logic_vector(2 downto 0);
+      out_tc : out std_logic_vector(7 downto 0) 
     );
 end entity;
 

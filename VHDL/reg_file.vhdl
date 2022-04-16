@@ -8,8 +8,8 @@ port (
     CLK ,reset: in std_logic;
     a2 : in std_logic_vector (2 downto 0);
     d1, d2 : out std_logic_vector(15 downto 0);
-    ir11to9, ir8to6, cc_out: in std_logic_vector(2 downto 0);
-    s7, pc, t2, t3: in std_logic_vector(15 downto 0)
+    ir11to9, ir8to6,ir5to3, cc_out: in std_logic_vector(2 downto 0);
+    sh7, pc, t2, t3: in std_logic_vector(15 downto 0)
     rf_cw: in std_logic_vector(8 downto 0)
   );
 end entity reg_file;
@@ -32,7 +32,7 @@ architecture arch of reg_file is
   signal r0, r1, r2, r3, r4, r5, r6, r7,d3: std_logic_vector(15 downto 0);
   signal a1,a3: std_logic_vector(2 downto 0);
 
-  p1: process(rf_cw, ir11to9, ir8to6, cc_out, s7, t2, t3, pc)
+  p1: process(rf_cw, ir11to9, ir8to6, ir5to3, cc_out, sh7, t2, t3, pc)
     -- mux1: process(rf_cw(5 downto 4), ir11to9,ir8to6,cc_out)
     begin
       case rf_cw(5 downto 4) is
@@ -55,17 +55,17 @@ architecture arch of reg_file is
         when "01" =>
           a3<= ir11to9;
         when "10" =>
-          a3<= ir8to6;    
+          a3<= ir5to3;    
         when others =>
           a3<= cc_out;
       end case; 
     -- end process;
 
-    -- mux4: process(rf_cw(1 downto 0), s7, t2, t3, pc)
+    -- mux4: process(rf_cw(1 downto 0), sh7, t2, t3, pc)
     -- begin
       case rf_cw(3 downto 2) is
         when "00" =>
-          d3<= s7;
+          d3<= sh7;
         when "01" =>
           d3<= t3;
         when "10" =>

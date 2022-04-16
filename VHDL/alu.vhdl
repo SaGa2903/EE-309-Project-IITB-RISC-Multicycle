@@ -5,7 +5,7 @@ use ieee.std_logic_1164.all;
 
 entity alu is
     port(
-        alu_op: in std_logic_vector(1 downto 0);
+        alu_op: in std_logic_vector(3 downto 0);
         t1, pc, se6, t2, shift1: in std_logic_vector(15 downto 0);
         -- alu_b: in std_logic_vector(15 downto 0);
         CY: out std_logic;
@@ -15,7 +15,7 @@ entity alu is
         alu_cw: in std_logic_vector(3 downto 0)
         -- CLK: in std_logic
     );
-    end entity;
+end entity;
 
 architecture arch of alu is
     signal alu_a, alu_b: std_logic_vector(15 downto 0);
@@ -45,13 +45,16 @@ begin
         temp_a := '0' & alu_a;
         temp_b := '0' & alu_b;
         CY <= Cin;
-        if alu_op(1) = '0' then --op ="00" | op="01"
-            alu_out := std_logic_vector(unsigned(temp_a)+unsigned(temp_b));
-            CY <= alu_out(16);
-        elsif alu_op = "10" then
-            alu_out(15 downto 0) := temp_a(15 downto 0) nand temp_b(15 downto 0);
+        if alu_op = "0010" then
+          alu_out(15 downto 0) := temp_a(15 downto 0) nand temp_b(15 downto 0);
+        -- if alu_cw(2) ='1' or alu_op(1) = '0' then --op ="00" | op="01" or alu_a=pc
+        --     alu_out := std_logic_vector(unsigned(temp_a)+unsigned(temp_b));
+        --     CY <= alu_out(16);
+        -- elsif alu_op = "0010" then
+        --     alu_out(15 downto 0) := temp_a(15 downto 0) nand temp_b(15 downto 0);
         else 
-            alu_out(16 downto 0):= (others=>"0");
+          alu_out := std_logic_vector(unsigned(temp_a)+unsigned(temp_b));
+          CY <= alu_out(16);
         end if;
 
         if alu_out(15 downto 0)="0000000000000000" then

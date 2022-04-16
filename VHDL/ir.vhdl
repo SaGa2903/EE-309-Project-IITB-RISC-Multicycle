@@ -10,6 +10,7 @@ entity ir is
         ir11to9, ir8to6, ir5to3: out std_logic_vector(2 downto 0);
         ir7to0: out std_logic_vector(7 downto 0);
         ir15to12: out std_logic_vector(3 downto 0);
+        ir13to12
     );
 end entity;
 
