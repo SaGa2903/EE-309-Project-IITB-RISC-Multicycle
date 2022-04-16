@@ -10,7 +10,7 @@ entity alu is
         -- alu_b: in std_logic_vector(15 downto 0);
         CY: out std_logic;
         Z: out std_logic;
-        Cin: in std_logic;
+        Cin,clk: in std_logic;
         alu_c: out std_logic_vector(15 downto 0);
         alu_cw: in std_logic_vector(3 downto 0)
         -- CLK: in std_logic
@@ -54,7 +54,9 @@ begin
         --     alu_out(15 downto 0) := temp_a(15 downto 0) nand temp_b(15 downto 0);
         else 
           alu_out := std_logic_vector(unsigned(temp_a)+unsigned(temp_b));
-          CY <= alu_out(16);
+          if(clk'event and clk='0') then
+            CY <= alu_out(16);
+          end if;
         end if;
 
         if alu_out(15 downto 0)="0000000000000000" then

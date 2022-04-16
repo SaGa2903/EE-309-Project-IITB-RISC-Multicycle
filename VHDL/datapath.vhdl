@@ -19,7 +19,7 @@ architecture arch of datapath is
             -- alu_b: in std_logic_vector(15 downto 0);
             CY: out std_logic;
             Z: out std_logic;
-            Cin: in std_logic;
+            Cin,clk: in std_logic;
             alu_c: out std_logic_vector(15 downto 0);
             alu_cw: in std_logic_vector(3 downto 0)
             -- CLK: in std_logic
@@ -44,7 +44,8 @@ architecture arch of datapath is
             ir8to0: out std_logic_vector(8 downto 0);
             ir11to9, ir8to6, ir5to3: out std_logic_vector(2 downto 0);
             ir7to0: out std_logic_vector(7 downto 0);
-            ir15to12: out std_logic_vector(3 downto 0)
+            ir15to12: out std_logic_vector(3 downto 0);
+            ir1to0: out std_logic_vector(1 downto 0)
         );
     end component;
 
@@ -118,6 +119,7 @@ architecture arch of datapath is
     signal i7to0, cc_addr_out, tc_out: std_logic_vector(7 downto 0);
     signal i15to12: std_logic_vector(3 downto 0);
     signal z, cy: std_logic
+    signal i1to0: std_logic_vector(1 downto 0);
 
 
     begin
@@ -208,9 +210,8 @@ architecture arch of datapath is
             ir8to6 => i8to6,
             ir5to3 => i5to3,
             ir7to0 => i7to0,
-            ir15to12 => i15to12
-
-        
+            ir15to12 => i15to12,
+            ir1to0=> i1to0
         );
 
         SE9_16: SE9 port map(
@@ -244,21 +245,26 @@ architecture arch of datapath is
             input=>tc_out
         );
 
-        -- alu_1: alu port map(
-        --     alu_op=> i15to12,
-        --     t1=> t1_out,
-        --     pc=>pc_out,
-        --     se6=>se6_out,
-        --     t2=>t2_out,
-        --     shift1=> sh1_out,
-        --     CY=>cy,
-        --     Z=>z,
-        --     Cin=>cy,
-        --     alu_c=> alu_c_out,
-        --     alu_cw=> state_cw(4 downto 1)
+        alu_1: alu port map(
+            clk=>clk,
+            alu_op=> i15to12,
+            t1=> t1_out,
+            pc=>pc_out,
+            se6=>se6_out,
+            t2=>t2_out,
+            shift1=> sh1_out,
+            CY=>cy,
+            Z=>z,
+            Cin=>cy,
+            alu_c=> alu_c_out,
+            alu_cw=> state_cw(4 downto 1)
 
-        -- );
+        );
 
-        c=> cy
-        z=> z;
+        c<= cy;
+        z<= z;
+        eq<=eq_out;
+        cz<= i1to0;
+        opcode<= i15to12;
+
     end arch;
