@@ -28,8 +28,8 @@ end entity reg_file;
 
 architecture arch of reg_file is
 
-	signal r0, r1, r2, r3, r4, r5, r6, r7,d3: std_logic_vector(15 downto 0);
-  signal a1,a3: std_logic_vector(2 downto 0);
+	signal r0, r1, r2, r3, r4, r5, r6, r7,d3: std_logic_vector(15 downto 0):= (others => '0');
+  signal a1,a3: std_logic_vector(2 downto 0):= (others => '0');
 
   begin
 
@@ -65,7 +65,7 @@ architecture arch of reg_file is
 
     -- mux4: process(rf_cw(1 downto 0), sh7, t2, t3, pc)
     -- begin
-      case rf_cw(3 downto 2) is
+      case rf_cw(1 downto 0) is
         when "00" =>
           d3<= sh7;
         when "01" =>
@@ -137,21 +137,21 @@ architecture arch of reg_file is
       if(rf_cw(7) = '1') then
         case a2 is
           when "000" =>
-            d1<= r0;
+            d2<= r0;
           when "001" =>
-            d1<= r1;
+            d2<= r1;
           when "010" =>
-            d1<= r2;
+            d2<= r2;
           when "011" =>
-            d1<= r3;
+            d2<= r3;
           when "100" =>
-            d1<= r4;
+            d2<= r4;
           when "101" =>
-            d1<= r5; 
+            d2<= r5; 
           when "110" =>
-            d1<= r6;
+            d2<= r6;
           when others =>
-            d1<= r7;              
+            d2<= r7;              
         end case;
       end if; 
   end process;

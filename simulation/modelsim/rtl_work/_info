@@ -1,0 +1,697 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/simulation/modelsim
+Ealu
+Z1 w1650136202
+Z2 DPx4 ieee 9 math_real 0 22 gNk<PdFJ<XNPcfef`f?Z81
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z5 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+!i122 15
+R0
+Z6 8C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/alu.vhdl
+Z7 FC:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/alu.vhdl
+l0
+L6 1
+VefTcgc88g[jT_0z3aZlPC0
+!s100 8hCVh`Ab;?zRBog7ge>^k2
+Z8 OV;C;2020.1;71
+31
+Z9 !s110 1651933131
+!i10b 1
+Z10 !s108 1651933131.000000
+Z11 !s90 -reportprogress|300|-93|-work|work|C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/alu.vhdl|
+!s107 C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/alu.vhdl|
+!i113 1
+Z12 o-93 -work work
+Z13 tExplicit 1 CvgOpt 0
+Aarch
+R2
+R3
+R4
+R5
+DEx4 work 3 alu 0 22 efTcgc88g[jT_0z3aZlPC0
+!i122 15
+l24
+L20 53
+V;MaRH=]S>f`K9DX3nC6Q;0
+!s100 VG@cScM[nAR9e[n9Tb3>Z2
+R8
+31
+R9
+!i10b 1
+R10
+R11
+Z14 !s107 C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/alu.vhdl|
+!i113 1
+R12
+R13
+Econd_check
+R1
+R2
+R3
+R4
+R5
+!i122 14
+R0
+Z15 8C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/cond_check.vhdl
+Z16 FC:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/cond_check.vhdl
+l0
+L6 1
+V6JZE7Hh]MTWm^MZLW2M^L3
+!s100 XTP?DFPJT>fD^XTa@XeZJ3
+R8
+31
+R9
+!i10b 1
+R10
+Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/cond_check.vhdl|
+Z18 !s107 C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/cond_check.vhdl|
+!i113 1
+R12
+R13
+Aarch
+R2
+R3
+R4
+R5
+DEx4 work 10 cond_check 0 22 6JZE7Hh]MTWm^MZLW2M^L3
+!i122 14
+l15
+L14 41
+Vha@e]^[^16W7E8FGbBeP]0
+!s100 HjolGmQCehNgkbi1e2cn00
+R8
+31
+R9
+!i10b 1
+R10
+R17
+R18
+!i113 1
+R12
+R13
+Econtroller
+R1
+R5
+R4
+R3
+!i122 0
+R0
+Z19 8C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/states_exp.vhdl
+Z20 FC:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/states_exp.vhdl
+l0
+L5 1
+VXB;HcC1VkjPMailC<_a6>2
+!s100 zD=RDeJW_Gmbhej0[X]V12
+R8
+31
+Z21 !s110 1651933130
+!i10b 1
+Z22 !s108 1651933130.000000
+Z23 !s90 -reportprogress|300|-93|-work|work|C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/states_exp.vhdl|
+Z24 !s107 C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/states_exp.vhdl|
+!i113 1
+R12
+R13
+Adesign
+R5
+R4
+R3
+DEx4 work 10 controller 0 22 XB;HcC1VkjPMailC<_a6>2
+!i122 0
+l21
+L15 169
+V;6n@UG6:WHV29^Ih8oM`M0
+!s100 J?R8Mi2ITYCnoZTTR>d0W1
+R8
+31
+R21
+!i10b 1
+R22
+R23
+R24
+!i113 1
+R12
+R13
+Edataflow
+Z25 w1651933086
+R5
+R4
+R3
+!i122 13
+R0
+Z26 8C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/datapath.vhdl
+Z27 FC:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/datapath.vhdl
+l0
+L5 1
+V[>zk5fjA]7>jQ43H17]df1
+!s100 ]GC;>:;5FzzV7I]eZ8RG_2
+R8
+31
+R9
+!i10b 1
+R10
+Z28 !s90 -reportprogress|300|-93|-work|work|C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/datapath.vhdl|
+Z29 !s107 C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/datapath.vhdl|
+!i113 1
+R12
+R13
+Aarch
+R5
+R4
+R3
+DEx4 work 8 dataflow 0 22 [>zk5fjA]7>jQ43H17]df1
+!i122 13
+l138
+L18 266
+V8fbV4O_PUoSVV4Qj3h`f?0
+!s100 [hjD4c8F[[IH_DmkzM=S=2
+R8
+31
+R9
+!i10b 1
+R10
+R28
+R29
+!i113 1
+R12
+R13
+Edut
+R1
+R4
+R3
+!i122 12
+R0
+Z30 8C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/DUT.vhdl
+Z31 FC:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/DUT.vhdl
+l0
+L5 1
+VSCCV?^MeCXccYe=8GbJEO3
+!s100 Qhd0KmkCig7YOAh9odT2i2
+R8
+31
+R9
+!i10b 1
+R10
+Z32 !s90 -reportprogress|300|-93|-work|work|C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/DUT.vhdl|
+Z33 !s107 C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/DUT.vhdl|
+!i113 1
+R12
+R13
+Aarch
+R4
+R3
+DEx4 work 3 dut 0 22 SCCV?^MeCXccYe=8GbJEO3
+!i122 12
+l16
+L10 14
+VCJ^n=TaGz1DS@0CjLFUGi1
+!s100 S`94ZKMzZ4Z0MSmk569Xc0
+R8
+31
+R9
+!i10b 1
+R10
+R32
+R33
+!i113 1
+R12
+R13
+Eir
+Z34 w1650110964
+R5
+R4
+R3
+!i122 10
+R0
+Z35 8C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/ir.vhdl
+Z36 FC:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/ir.vhdl
+l0
+L5 1
+VdAgE[QoAZ=06hUo2Ul4=42
+!s100 HhFH?dlLR8SVfg`e1J:ej1
+R8
+31
+R9
+!i10b 1
+R10
+Z37 !s90 -reportprogress|300|-93|-work|work|C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/ir.vhdl|
+Z38 !s107 C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/ir.vhdl|
+!i113 1
+R12
+R13
+Aarch
+R5
+R4
+R3
+DEx4 work 2 ir 0 22 dAgE[QoAZ=06hUo2Ul4=42
+!i122 10
+l18
+L17 13
+V@>hD[T`A:zL8;=^2oeH@@2
+!s100 ?lU4C9e`4NkF3@jlPoABk2
+R8
+31
+R9
+!i10b 1
+R10
+R37
+R38
+!i113 1
+R12
+R13
+Emem
+Z39 w1651930048
+R5
+R4
+R3
+!i122 9
+R0
+Z40 8C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/memory.vhdl
+Z41 FC:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/memory.vhdl
+l0
+L5 1
+Vk`@G]A>:EZOB`E;U0jHnQ1
+!s100 j=E030zAV5IK=T^3[XBhQ2
+R8
+31
+R9
+!i10b 1
+R10
+Z42 !s90 -reportprogress|300|-93|-work|work|C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/memory.vhdl|
+Z43 !s107 C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/memory.vhdl|
+!i113 1
+R12
+R13
+Aarch
+R5
+R4
+R3
+DEx4 work 3 mem 0 22 k`@G]A>:EZOB`E;U0jHnQ1
+!i122 9
+l18
+L14 38
+VP;b=6S5kXQ>XJ<kT<2LK32
+!s100 >66f23P52AECCb;JejLYH3
+R8
+31
+R9
+!i10b 1
+R10
+R42
+R43
+!i113 1
+R12
+R13
+Ereg_2
+Z44 w1650066895
+R4
+R3
+!i122 7
+R0
+Z45 8C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/register_2.vhdl
+Z46 FC:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/register_2.vhdl
+l0
+L4 1
+V8meNLK==GTeDWHlL1S;@J1
+!s100 ^S5DfLEa[LaC0K;lMlCD82
+R8
+31
+R9
+!i10b 1
+R10
+Z47 !s90 -reportprogress|300|-93|-work|work|C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/register_2.vhdl|
+Z48 !s107 C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/register_2.vhdl|
+!i113 1
+R12
+R13
+Aarch
+R4
+R3
+DEx4 work 5 reg_2 0 22 8meNLK==GTeDWHlL1S;@J1
+!i122 7
+l14
+Z49 L13 18
+VUk9:K`>SS0?cKJT6PV70S0
+!s100 ;70F<:Z4_:dBnE8318>K?1
+R8
+31
+R9
+!i10b 1
+R10
+R47
+R48
+!i113 1
+R12
+R13
+Ereg_3
+Z50 w1650067151
+R4
+R3
+!i122 6
+R0
+Z51 8C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/register_3.vhdl
+Z52 FC:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/register_3.vhdl
+l0
+L4 1
+VaiZf>1>dCf=2Vl6efoGiZ1
+!s100 nmnbZWFzlEN_h66:OJk;B0
+R8
+31
+R9
+!i10b 1
+R10
+Z53 !s90 -reportprogress|300|-93|-work|work|C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/register_3.vhdl|
+Z54 !s107 C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/register_3.vhdl|
+!i113 1
+R12
+R13
+Aarch
+R4
+R3
+DEx4 work 5 reg_3 0 22 aiZf>1>dCf=2Vl6efoGiZ1
+!i122 6
+l14
+L13 22
+V3mko`_R[MeKD?>^YV5RGH0
+!s100 EDDgTzbMX3nfnc62Va;A42
+R8
+31
+R9
+!i10b 1
+R10
+R53
+R54
+!i113 1
+R12
+R13
+Ereg_file
+Z55 w1651932948
+R5
+R4
+R3
+!i122 8
+R0
+Z56 8C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/reg_file.vhdl
+Z57 FC:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/reg_file.vhdl
+l0
+L6 1
+V:CZOZDoH5@DY=jA1JC<GM1
+!s100 gZ]H=B:W7fWfEm=_Fg`kS2
+R8
+31
+R9
+!i10b 1
+R10
+Z58 !s90 -reportprogress|300|-93|-work|work|C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/reg_file.vhdl|
+Z59 !s107 C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/reg_file.vhdl|
+!i113 1
+R12
+R13
+Aarch
+R5
+R4
+R3
+DEx4 work 8 reg_file 0 22 :CZOZDoH5@DY=jA1JC<GM1
+!i122 8
+l34
+L29 131
+VeXjUUTIH6?4@`K4DO1[?b3
+!s100 B7cAdRDFIfHT^K0iN>zF[2
+R8
+31
+R9
+!i10b 1
+R10
+R58
+R59
+!i113 1
+R12
+R13
+Ereg_tc
+Z60 w1650078570
+R4
+R3
+!i122 5
+R0
+Z61 8C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/register_tc.vhdl
+Z62 FC:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/register_tc.vhdl
+l0
+L4 1
+V`9mD=71LS9bP@l]QcR7A03
+!s100 BD7[H:nPZz>HSH@9K_cez2
+R8
+31
+R9
+!i10b 1
+R10
+Z63 !s90 -reportprogress|300|-93|-work|work|C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/register_tc.vhdl|
+Z64 !s107 C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/register_tc.vhdl|
+!i113 1
+R12
+R13
+Aarch
+R4
+R3
+DEx4 work 6 reg_tc 0 22 `9mD=71LS9bP@l]QcR7A03
+!i122 5
+l14
+R49
+Vfa]`14>97RKgMNd_`d]fg3
+!s100 Hn6RSmSMXIiZ73M8=HhVE2
+R8
+31
+R9
+!i10b 1
+R10
+R63
+R64
+!i113 1
+R12
+R13
+Erisc
+R1
+R2
+R3
+R4
+R5
+!i122 11
+R0
+Z65 8C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/IITB_RISC.vhdl
+Z66 FC:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/IITB_RISC.vhdl
+l0
+L6 1
+Vd[zkS6]Sz1eOoLjOQDlU`2
+!s100 bbh5?P7mUZg2l:3dI:h6O1
+R8
+31
+R9
+!i10b 1
+R10
+Z67 !s90 -reportprogress|300|-93|-work|work|C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/IITB_RISC.vhdl|
+Z68 !s107 C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/IITB_RISC.vhdl|
+!i113 1
+R12
+R13
+Aarch
+R2
+R3
+R4
+R5
+DEx4 work 4 risc 0 22 d[zkS6]Sz1eOoLjOQDlU`2
+!i122 11
+l42
+L10 42
+VdH5]ZBJCDCO:UKZT?WLf00
+!s100 JiogCcjUz@4OK;HUQK8Ab0
+R8
+31
+R9
+!i10b 1
+R10
+R67
+R68
+!i113 1
+R12
+R13
+Ese6
+Z69 w1650023424
+R5
+R4
+R3
+!i122 4
+R0
+Z70 8C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/se6.vhdl
+Z71 FC:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/se6.vhdl
+l0
+L5 1
+VmHS:S=n6@8mBe1h=h_?gF3
+!s100 dcABo_6lcQeaGYf5Rih0]2
+R8
+31
+R21
+!i10b 1
+R22
+Z72 !s90 -reportprogress|300|-93|-work|work|C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/se6.vhdl|
+Z73 !s107 C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/se6.vhdl|
+!i113 1
+R12
+R13
+Aarch
+R5
+R4
+R3
+DEx4 work 3 se6 0 22 mHS:S=n6@8mBe1h=h_?gF3
+!i122 4
+l13
+Z74 L12 12
+VCfE;B;5^V]PWFNFDE`bz?0
+!s100 G7UL?PD5AQEZ]QmAlCE^R3
+R8
+31
+R9
+!i10b 1
+R22
+R72
+R73
+!i113 1
+R12
+R13
+Ese9
+R69
+R5
+R4
+R3
+!i122 3
+R0
+Z75 8C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/se9.vhdl
+Z76 FC:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/se9.vhdl
+l0
+L5 1
+V=R;a0Y_bhGKH]5=JA4=zk3
+!s100 EA74?jBK;A2B]5j1E1L=[2
+R8
+31
+R21
+!i10b 1
+R22
+Z77 !s90 -reportprogress|300|-93|-work|work|C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/se9.vhdl|
+Z78 !s107 C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/se9.vhdl|
+!i113 1
+R12
+R13
+Aarch
+R5
+R4
+R3
+DEx4 work 3 se9 0 22 =R;a0Y_bhGKH]5=JA4=zk3
+!i122 3
+l13
+R74
+V0VXD?[S5FYfJ`60Oc>]CP0
+!s100 B1fBg3_1oQQJ>ao_4AOh80
+R8
+31
+R21
+!i10b 1
+R22
+R77
+R78
+!i113 1
+R12
+R13
+Eshift1
+Z79 w1650068129
+R5
+R4
+R3
+!i122 2
+R0
+Z80 8C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/shift1.vhdl
+Z81 FC:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/shift1.vhdl
+l0
+L5 1
+Va4o?Y:b5IURFm3`?ILgkV0
+!s100 VO9o47J<V@f;Fn5=7:eHg0
+R8
+31
+R21
+!i10b 1
+R22
+Z82 !s90 -reportprogress|300|-93|-work|work|C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/shift1.vhdl|
+Z83 !s107 C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/shift1.vhdl|
+!i113 1
+R12
+R13
+Aarch
+R5
+R4
+R3
+DEx4 work 6 shift1 0 22 a4o?Y:b5IURFm3`?ILgkV0
+!i122 2
+l13
+Z84 L12 5
+V6JQnhS`j8?3W>Vc_@BC>P2
+!s100 l<g?g:GgHmQzXOY6Df^aE1
+R8
+31
+R21
+!i10b 1
+R22
+R82
+R83
+!i113 1
+R12
+R13
+Eshift7
+Z85 w1650068132
+R5
+R4
+R3
+!i122 1
+R0
+Z86 8C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/shift7.vhdl
+Z87 FC:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/shift7.vhdl
+l0
+L5 1
+V6DKIPX`M<0iI5I=hg5kPV3
+!s100 zhMNhRUkT^5jak]`akJkN2
+R8
+31
+R21
+!i10b 1
+R22
+Z88 !s90 -reportprogress|300|-93|-work|work|C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/shift7.vhdl|
+Z89 !s107 C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/shift7.vhdl|
+!i113 1
+R12
+R13
+Aarch
+R5
+R4
+R3
+DEx4 work 6 shift7 0 22 6DKIPX`M<0iI5I=hg5kPV3
+!i122 1
+l13
+R84
+V=ERFZ0Bd59MKzINcil_U?3
+!s100 S0`>aQz5bf0E1Oh@3WXKC3
+R8
+31
+R21
+!i10b 1
+R22
+R88
+R89
+!i113 1
+R12
+R13

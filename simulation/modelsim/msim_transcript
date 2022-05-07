@@ -1,0 +1,319 @@
+# Reading pref.tcl
+# do DUT_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/states_exp.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:48:50 on May 07,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/states_exp.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Controller
+# -- Compiling architecture design of Controller
+# End time: 19:48:50 on May 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/shift7.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:48:50 on May 07,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/shift7.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Shift7
+# -- Compiling architecture arch of Shift7
+# End time: 19:48:50 on May 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/shift1.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:48:50 on May 07,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/shift1.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Shift1
+# -- Compiling architecture arch of Shift1
+# End time: 19:48:50 on May 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/se9.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:48:50 on May 07,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/se9.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity SE9
+# -- Compiling architecture arch of SE9
+# End time: 19:48:50 on May 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/se6.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:48:50 on May 07,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/se6.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity SE6
+# -- Compiling architecture arch of SE6
+# End time: 19:48:51 on May 07,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/register_tc.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:48:51 on May 07,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/register_tc.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity reg_tc
+# -- Compiling architecture arch of reg_tc
+# End time: 19:48:51 on May 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/register_3.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:48:51 on May 07,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/register_3.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity reg_3
+# -- Compiling architecture arch of reg_3
+# End time: 19:48:51 on May 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/register_2.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:48:51 on May 07,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/register_2.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity reg_2
+# -- Compiling architecture arch of reg_2
+# End time: 19:48:51 on May 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/reg_file.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:48:51 on May 07,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/reg_file.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity reg_file
+# -- Compiling architecture arch of reg_file
+# End time: 19:48:51 on May 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/memory.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:48:51 on May 07,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/memory.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mem
+# -- Compiling architecture arch of mem
+# End time: 19:48:51 on May 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/ir.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:48:51 on May 07,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/ir.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ir
+# -- Compiling architecture arch of ir
+# End time: 19:48:51 on May 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/IITB_RISC.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:48:51 on May 07,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/IITB_RISC.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity risc
+# -- Compiling architecture arch of risc
+# End time: 19:48:51 on May 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/DUT.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:48:51 on May 07,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/DUT.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity DUT
+# -- Compiling architecture arch of DUT
+# End time: 19:48:51 on May 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/datapath.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:48:51 on May 07,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/datapath.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity dataflow
+# -- Compiling architecture arch of dataflow
+# End time: 19:48:51 on May 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/cond_check.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:48:51 on May 07,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/cond_check.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity cond_check
+# -- Compiling architecture arch of cond_check
+# End time: 19:48:51 on May 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/alu.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:48:51 on May 07,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/sahil/Desktop/Sahil/IITB/Sem 4/EE309/Project 1/EE-309-Project-IITB-RISC/VHDL/alu.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity alu
+# -- Compiling architecture arch of alu
+# End time: 19:48:51 on May 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim -gui -l msim_transcript work.dut
+# vsim -gui -l msim_transcript work.dut 
+# Start time: 19:49:51 on May 07,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.dut(arch)
+# Loading ieee.numeric_std(body)
+# Loading ieee.math_real(body)
+# Loading work.risc(arch)
+# Loading work.dataflow(arch)
+# Loading work.reg_2(arch)
+# Loading work.reg_tc(arch)
+# Loading work.reg_3(arch)
+# Loading work.reg_file(arch)
+# Loading work.mem(arch)
+# Loading work.ir(arch)
+# Loading work.se9(arch)
+# Loading work.se6(arch)
+# Loading work.shift7(arch)
+# Loading work.shift1(arch)
+# Loading work.cond_check(arch)
+# Loading work.alu(arch)
+# Loading work.controller(design)
+add wave -position insertpoint  \
+sim:/dut/instance/data/state_id \
+sim:/dut/instance/data/state_cw \
+sim:/dut/instance/data/clk \
+sim:/dut/instance/data/reset \
+sim:/dut/instance/data/c \
+sim:/dut/instance/data/z \
+sim:/dut/instance/data/eq \
+sim:/dut/instance/data/opcode \
+sim:/dut/instance/data/cz \
+sim:/dut/instance/data/rf_d1 \
+sim:/dut/instance/data/rf_d2 \
+sim:/dut/instance/data/alu_c_out \
+sim:/dut/instance/data/t1_out \
+sim:/dut/instance/data/mem_d_out \
+sim:/dut/instance/data/t3_out \
+sim:/dut/instance/data/pc_out \
+sim:/dut/instance/data/se6_out \
+sim:/dut/instance/data/se9_out \
+sim:/dut/instance/data/sh7_out \
+sim:/dut/instance/data/sh1_out \
+sim:/dut/instance/data/t2_out \
+sim:/dut/instance/data/i8to6 \
+sim:/dut/instance/data/i11to9 \
+sim:/dut/instance/data/i5to3 \
+sim:/dut/instance/data/cc_out_sig \
+sim:/dut/instance/data/i5to0 \
+sim:/dut/instance/data/i8to0 \
+sim:/dut/instance/data/i7to0 \
+sim:/dut/instance/data/cc_addr_out \
+sim:/dut/instance/data/tc_out \
+sim:/dut/instance/data/i15to12 \
+sim:/dut/instance/data/z_sig \
+sim:/dut/instance/data/cy_sig \
+sim:/dut/instance/data/eq_out \
+sim:/dut/instance/data/i1to0
+add wave -position insertpoint  \
+sim:/dut/instance/data/state_id \
+sim:/dut/instance/data/state_cw \
+sim:/dut/instance/data/clk \
+sim:/dut/instance/data/reset \
+sim:/dut/instance/data/c \
+sim:/dut/instance/data/z \
+sim:/dut/instance/data/eq \
+sim:/dut/instance/data/opcode \
+sim:/dut/instance/data/cz \
+sim:/dut/instance/data/rf_d1 \
+sim:/dut/instance/data/rf_d2 \
+sim:/dut/instance/data/alu_c_out \
+sim:/dut/instance/data/t1_out \
+sim:/dut/instance/data/mem_d_out \
+sim:/dut/instance/data/t3_out \
+sim:/dut/instance/data/pc_out \
+sim:/dut/instance/data/se6_out \
+sim:/dut/instance/data/se9_out \
+sim:/dut/instance/data/sh7_out \
+sim:/dut/instance/data/sh1_out \
+sim:/dut/instance/data/t2_out \
+sim:/dut/instance/data/i8to6 \
+sim:/dut/instance/data/i11to9 \
+sim:/dut/instance/data/i5to3 \
+sim:/dut/instance/data/cc_out_sig \
+sim:/dut/instance/data/i5to0 \
+sim:/dut/instance/data/i8to0 \
+sim:/dut/instance/data/i7to0 \
+sim:/dut/instance/data/cc_addr_out \
+sim:/dut/instance/data/tc_out \
+sim:/dut/instance/data/i15to12 \
+sim:/dut/instance/data/z_sig \
+sim:/dut/instance/data/cy_sig \
+sim:/dut/instance/data/eq_out \
+sim:/dut/instance/data/i1to0
+noforce sim:/dut/instance/data/clk
+force -freeze sim:/dut/instance/data/clk 1 0, 0 {50 ps} -r 100
+# ** Warning: (vsim-8780) Forcing /dut/input_vector as root of /dut/instance/data/clk specified in the force.
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /dut/instance/data/memory
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# End time: 19:51:19 on May 07,2022, Elapsed time: 0:01:28
+# Errors: 0, Warnings: 2

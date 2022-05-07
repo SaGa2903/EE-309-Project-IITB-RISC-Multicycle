@@ -14,7 +14,7 @@ end entity mem;
 architecture arch of mem is
     signal add_in, d_in: std_logic_vector(15 downto 0);
     type mem_block is array (0 to 255) of std_logic_vector (15 downto 0); --512 Byte memory
-    signal data_temp: mem_block := (others => (others =>'0'));
+    signal data_temp: mem_block := ("0001000001010000","0011000001010000", others => (others =>'0'));
 begin
 
     p1: process(d1, t1, t3, mem_cw)

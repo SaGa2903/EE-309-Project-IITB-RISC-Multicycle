@@ -125,14 +125,14 @@ architecture arch of dataflow is
         );
     end component mem;
     
-    signal rf_d1, rf_d2,alu_c_out, t1_out, mem_d_out, t3_out, pc_out, se6_out, se9_out,sh7_out,sh1_out,t2_out: std_logic_vector(15 downto 0);
-    signal i8to6,i11to9,i5to3,cc_out_sig: std_logic_vector(2 downto 0);
-    signal i5to0: std_logic_vector(5 downto 0);
-    signal i8to0: std_logic_vector(8 downto 0);
-    signal i7to0, cc_addr_out, tc_out: std_logic_vector(7 downto 0);
-    signal i15to12: std_logic_vector(3 downto 0);
-    signal z_sig, cy_sig,eq_out: std_logic;
-    signal i1to0: std_logic_vector(1 downto 0);
+    signal rf_d1, rf_d2,alu_c_out, t1_out, mem_d_out, t3_out, pc_out, se6_out, se9_out,sh7_out,sh1_out,t2_out: std_logic_vector(15 downto 0):= (others => '0');
+    signal i8to6,i11to9,i5to3,cc_out_sig: std_logic_vector(2 downto 0):= (others => '0');
+    signal i5to0: std_logic_vector(5 downto 0):= (others => '0');
+    signal i8to0: std_logic_vector(8 downto 0):= (others => '0');
+    signal i7to0, cc_addr_out, tc_out: std_logic_vector(7 downto 0):= (others => '0');
+    signal i15to12: std_logic_vector(3 downto 0):= (others => '0');
+    signal z_sig, cy_sig,eq_out: std_logic:= '0';
+    signal i1to0: std_logic_vector(1 downto 0):= (others => '0');
 
 
     begin
